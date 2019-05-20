@@ -1,5 +1,7 @@
 package com.wallex.utils;
 
+import com.wallex.common.Constants;
+
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
@@ -15,7 +17,7 @@ public class NumberUtil {
      */
     public static BigDecimal phaseIfNum(String input){
         try {
-            return new BigDecimal(input).setScale(15, RoundingMode.HALF_UP);
+            return new BigDecimal(input).setScale(Constants.INNER_SCALES, RoundingMode.HALF_UP);
         }catch (Exception e){
             return null;
         }

@@ -2,6 +2,7 @@ package com.wallex;
 
 import com.wallex.business.NumOperation;
 import com.wallex.business.impl.*;
+import com.wallex.common.Constants;
 import com.wallex.enums.EnumOperatorType;
 import com.wallex.utils.NumberUtil;
 
@@ -31,7 +32,6 @@ public class Calculator {
      */
     private Stack<String> historyStack = new Stack<>();
 
-    private int displayScales = 10;
     /**
      * Mark if current calculator met error
      */
@@ -117,7 +117,7 @@ public class Calculator {
     private void printStack(){
         System.out.print("stack: ");
         for (BigDecimal d : stack){
-            System.out.print(d.setScale(displayScales, BigDecimal.ROUND_HALF_UP).stripTrailingZeros().toPlainString()+" ");
+            System.out.print(d.setScale(Constants.DISPLAY_SCALES, BigDecimal.ROUND_HALF_UP).stripTrailingZeros().toPlainString()+" ");
         }
         System.out.println();
     }
