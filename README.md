@@ -25,20 +25,20 @@ Turn to the target directory, run the following command to start the calculator 
 ```bash
 java -jar rpn-1.0-SNAPSHOT.jar
 ```
-#Examples for input and output
-##Example 1
+# Examples for input and output
+## Example 1
 ```bash
 5 2
 stack: 5 2
 ```
-##Example 2
+## Example 2
 ```bash
 2 sqrt 
 stack: 1.4142135623
 clear 9 sqrt
 stack: 3
 ```
-##Example 3
+## Example 3
 ```bash
 5 4 3 2
 stack: 5 4 3 2
